@@ -15,15 +15,8 @@ function Nav() {
     <div className={classes.nav}>
       <div className={classes.logo}>Organo</div>
 
-      <input
-        type="checkbox"
-        id={classes.navtoggle}
-        className={classes.navtoggle}
-        checked={isOpen}
-        onChange={handleToggle}
-      />
-      <ul className={`${classes.navLinks} ${isOpen ? 'open' : ''}`}>
-        <li><a href="#" className={classes.Active}>Home</a></li>
+      <ul className={`${classes.navLinks} ${isOpen ? classes.open : ""}`}>
+        <li><a href="#" className={classes.active}>Home</a></li>
         <li><a href="#">Delivery</a></li>
         <li><a href="#">Pricing</a></li>
         <li><a href="#">FAQ</a></li>
@@ -31,8 +24,8 @@ function Nav() {
         <li><button className={classes.btn}>Get Started</button></li>
       </ul>
 
-      <label htmlFor={classes.navtoggle} className={classes.navtoggleLabel} onClick={handleToggle}>
-        <FontAwesomeIcon icon={isOpen ? faXmark : faBars} className="menu-icon" />
+      <label htmlFor="navtoggle" className={classes.navtoggleLabel} onClick={handleToggle}>
+        <FontAwesomeIcon icon={isOpen ? faXmark : faBars} className={classes.menuIcon} />
       </label>
     </div>
   );
