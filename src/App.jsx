@@ -1,7 +1,9 @@
+import Nav from "./components/Nav";
+
 function App () {
   return (
     <div>
-      | React- Responsive - Food - Website |
+      <Nav/>
     </div>
   );
 }
